@@ -1,0 +1,19 @@
+{
+  "[dart]": {
+    //constを自動追加
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+    //あとは自動設定
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false,
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.formatOnPaste": true
+  }
+}
