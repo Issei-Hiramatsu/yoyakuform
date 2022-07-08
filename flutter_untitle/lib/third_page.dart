@@ -96,15 +96,18 @@ class _ThirdPage extends State {
                     data: Theme.of(context).copyWith(
                         unselectedWidgetColor:
                             Colors.orangeAccent), //チェックボックスが押される前の色を決める
-                    child: Checkbox(
-                      value: isChecked,
-                      onChanged: (value) {
-                        setState(() {
-                          isChecked = value!;
-                        });
-                      },
-                      activeColor: Colors.red,
-                      checkColor: Colors.white,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 16.0, left: 16.0),
+                      child: Checkbox(
+                        value: isChecked,
+                        onChanged: (value) {
+                          setState(() {
+                            isChecked = value!;
+                          });
+                        },
+                        activeColor: Colors.red,
+                        checkColor: Colors.white,
+                      ),
                     ),
                   ),
                   const Text('この約束を守れますか？')

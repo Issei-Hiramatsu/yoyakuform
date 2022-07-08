@@ -81,6 +81,7 @@ class SecondPage extends StatelessWidget {
                 firstDay: DateTime.utc(2022, 6, 1),
                 lastDay: DateTime.utc(2022, 8, 31),
                 //headerVisible: false, //カレンダーのヘッダー部分を消した
+                locale: 'ja_JP',
                 focusedDay: DateTime.now(),
               ),
             ),
