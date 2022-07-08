@@ -19,60 +19,74 @@ class _ThirdPage extends State {
         body: Center(
           child: Column(
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blue),
-                ),
-                child: const Text(
-                  '2022年 7月',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
+              Padding(
+                padding: const EdgeInsets.only(top: 30.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.blue),
+                  ),
+                  child: const SizedBox(
+                    width: 315,
+                    height: 50,
+                    child:  Text(
+                      '2022年 7月',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                   ),
                 ),
               ),
               const Padding(
                 padding: EdgeInsets.only(top: 20, right: 30, left: 30),
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'UserID',
+                child: SizedBox(
+                  width: 320,
+                  height: 50,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'UserID',
+                    ),
                   ),
                 ),
               ),
               const Padding(
                 padding: EdgeInsets.only(top: 20, right: 30, left: 30),
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'UserID',
+                child: SizedBox(
+                  width: 320,
+                  height: 50,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'UserID',
+                    ),
                   ),
                 ),
               ),
               const Padding(
                 padding: EdgeInsets.only(top: 20, right: 30, left: 30),
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'UserID',
+                child: SizedBox(
+                  width: 320,
+                  height: 50,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'UserID',
+                    ),
                   ),
                 ),
               ),
               const Padding(
                 padding: EdgeInsets.only(top: 20, right: 30, left: 30),
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'UserID',
-                  ),
-                ),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(top: 20, right: 30, left: 30),
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'UserID',
+                child: SizedBox(
+                  width: 320,
+                  height: 50,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'UserID',
+                    ),
                   ),
                 ),
               ),
@@ -94,8 +108,10 @@ class _ThirdPage extends State {
                     ),
                   ),
                   const Text('この約束を守れますか？')
+                  
                 ],
               ),
+              
             ],
           ),
         ));
