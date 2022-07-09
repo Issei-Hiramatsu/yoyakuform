@@ -87,7 +87,7 @@ class SecondPage extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: const [
+              children:  const [
                 Padding(
                   padding: EdgeInsets.only(top: 30, left: 30.0),
                   child: Text(
@@ -100,6 +100,7 @@ class SecondPage extends StatelessWidget {
                 ),
               ],
             ),
+            
           ],
         )));
   }

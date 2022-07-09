@@ -115,6 +115,10 @@ class _ThirdPage extends State {
                 ],
               ),
               
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text('送信')
+                )
             ],
           ),
         ));
