@@ -43,9 +43,7 @@ class BookingPage extends StatelessWidget {
                       style: OutlinedButton.styleFrom(
                         backgroundColor: Colors.yellow, //背景色
                       ),
-                      child: const Text('一時的に遷都'),
-                    ),
-                  ),
+                      child: const Text('一時的に遷都'), ),),
                   SizedBox(
                     width: 100,
                     height: 45,
@@ -85,6 +83,9 @@ class BookingPage extends StatelessWidget {
                 //headerVisible: false, //カレンダーのヘッダー部分を消した
                 locale: 'ja_JP',
                 focusedDay: DateTime.now(),
+                headerStyle: const HeaderStyle(
+                  formatButtonVisible: false,
+                  ),
               ),
             ),
             Row(
