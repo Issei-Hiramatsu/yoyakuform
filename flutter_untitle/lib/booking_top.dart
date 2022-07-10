@@ -78,6 +78,8 @@ class BookingPage extends StatelessWidget {
                 headerStyle: const HeaderStyle(
                   titleCentered: true, //年月を中央よせする
                   formatButtonVisible: false, //2weekのボタンをけす
+                  titleTextStyle: //タイトルの文字の大きさを変える
+                      TextStyle(fontWeight: FontWeight.w700, fontSize: 20.0),
                 ),
               ),
             ),
