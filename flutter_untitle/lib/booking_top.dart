@@ -71,9 +71,9 @@ class BookingPage extends StatelessWidget {
               padding: const EdgeInsets.only(right: 30.0, left: 30.0),
               child: TableCalendar(
                 firstDay: DateTime.utc(2022, 7, 9),
-                lastDay: DateTime.utc(2022, 8, 31),
+                lastDay: DateTime.utc(2022, 12, 31),
                 //headerVisible: false, //カレンダーのヘッダー部分を消した
-                locale: 'ja_JP',
+                locale: 'ja_JP', //日本語化
                 focusedDay: DateTime.now(),
                 headerStyle: const HeaderStyle(
                   titleCentered: true, //年月を中央よせする
@@ -87,7 +87,7 @@ class BookingPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: const [
                 Padding(
-                  padding: EdgeInsets.only(top: 30, left: 30.0),
+                  padding: EdgeInsets.only(top: 20, left: 45.0),
                   child: Text(
                     '注意事項',
                     style: TextStyle(
