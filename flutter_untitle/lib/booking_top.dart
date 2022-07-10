@@ -66,17 +66,6 @@ class BookingPage extends StatelessWidget {
                 ],
               ),
             ),
-            //年月表示
-            const Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Text(
-                '2022年 7月',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-            ),
             //カレンダー表示
             Padding(
               padding: const EdgeInsets.only(right: 30.0, left: 30.0),
@@ -87,7 +76,8 @@ class BookingPage extends StatelessWidget {
                 locale: 'ja_JP',
                 focusedDay: DateTime.now(),
                 headerStyle: const HeaderStyle(
-                  formatButtonVisible: false,
+                  titleCentered: true, //年月を中央よせする
+                  formatButtonVisible: false, //2weekのボタンをけす
                 ),
               ),
             ),
