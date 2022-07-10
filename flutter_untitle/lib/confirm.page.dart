@@ -28,7 +28,7 @@ class _ConfirmPage extends State {
                   child: const SizedBox(
                     width: 315,
                     height: 50,
-                    child:  Text(
+                    child: Text(
                       '2022年 7月',
                       style: TextStyle(
                         fontSize: 20,
@@ -111,14 +111,9 @@ class _ConfirmPage extends State {
                     ),
                   ),
                   const Text('この約束を守れますか？')
-                  
                 ],
               ),
-              
-              ElevatedButton(
-                onPressed: () {},
-                child: const Text('送信')
-                )
+              ElevatedButton(onPressed: () {}, child: const Text('送信'))
             ],
           ),
         ));
