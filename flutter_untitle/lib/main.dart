@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-
-<<<<<<< HEAD
-import 'first_page.dart';
 import 'package:intl/date_symbol_data_local.dart'; //intlインポートする
-=======
 import 'login_page.dart';
->>>>>>> develop
 
 void main() {
   runApp(const MyApp());
