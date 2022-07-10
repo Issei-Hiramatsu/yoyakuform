@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 //ここでwidgetを作成
-class ThirdPage extends StatefulWidget {
+class ConfirmPage extends StatefulWidget {
   @override
-  State createState() => _ThirdPage();
+  State createState() => _ConfirmPage();
 }
 
 //上記で作ったwidgetをstateに入れる
-class _ThirdPage extends State {
+class _ConfirmPage extends State {
   bool isChecked = false; //boolの値が合っているかどうか
 
   @override
@@ -115,10 +115,6 @@ class _ThirdPage extends State {
                 ],
               ),
               
-              ElevatedButton(
-                onPressed: () {},
-                child: const Text('送信')
-                )
             ],
           ),
         ));

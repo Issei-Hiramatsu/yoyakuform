@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'first_page.dart';
-import 'package:intl/date_symbol_data_local.dart'; //intlインポートする
+import 'login_page.dart';
 
 void main() {
   runApp(const MyApp());
-  initializeDateFormatting('ja').then((_) => runApp(const MyApp())); //上の記述をこちらに変更します
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: FirstPage(),
+      home: LoginPage(),
     );
   }
 }

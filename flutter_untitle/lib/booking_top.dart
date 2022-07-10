@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_untitle/third_page.dart';
+
 import 'package:table_calendar/table_calendar.dart';
 
-class SecondPage extends StatelessWidget {
-  SecondPage(this.text, {Key? key}) : super(key: key);
+import 'confirm.page.dart';
+
+class BookingPage extends StatelessWidget {
+  BookingPage(this.text, {Key? key}) : super(key: key);
   final String text;
 
   final DateTime _focusedDay = DateTime.now();
@@ -35,7 +37,7 @@ class SecondPage extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => ThirdPage()),
+                          MaterialPageRoute(builder: (context) => ConfirmPage()),
                         );
                       },
                       style: OutlinedButton.styleFrom(
@@ -87,7 +89,7 @@ class SecondPage extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              children:  const [
+              children: const [
                 Padding(
                   padding: EdgeInsets.only(top: 30, left: 30.0),
                   child: Text(
@@ -100,7 +102,6 @@ class SecondPage extends StatelessWidget {
                 ),
               ],
             ),
-            
           ],
         )));
   }
