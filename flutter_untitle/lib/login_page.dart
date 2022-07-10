@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_untitle/second_page.dart';
+import 'package:flutter_untitle/booking_top.dart';
 
-class FirstPage extends StatelessWidget {
+class LoginPage extends StatelessWidget {
   String nameText = '';
   //変数を入力
 
@@ -54,7 +54,7 @@ class FirstPage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => SecondPage(nameText),
+                        builder: (context) => BookingPage(nameText),
                       ),
                     );
                   },
