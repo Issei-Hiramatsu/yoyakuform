@@ -4,7 +4,8 @@ import 'login_page.dart';
 
 void main() {
   runApp(const MyApp());
-  initializeDateFormatting('ja').then((_) => runApp(const MyApp())); //上の記述をこちらに変更します
+  initializeDateFormatting('ja')
+      .then((_) => runApp(const MyApp())); //上の記述をこちらに変更します
 }
 
 class MyApp extends StatelessWidget {

@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-
 import 'package:table_calendar/table_calendar.dart';
-
 import 'confirm.page.dart';
 
-class BookingPage extends StatelessWidget {
-  BookingPage(this.text, {Key? key}) : super(key: key);
-  final String text;
+DateTime _focused = DateTime.now();
+DateTime? _selected; //
 
-  final DateTime _focusedDay = DateTime.now();
+class BookingPage extends StatefulWidget {
+  const BookingPage({Key? key}) : super(key: key);
+  @override
+  State createState() => _BookingPage();
+}
 
+class _BookingPage extends State {
 //種類　日時選択のトップページ
 //（予定) ドコモせんたくしてなかったらアラートモーダリ
 
@@ -71,16 +73,27 @@ class BookingPage extends StatelessWidget {
               padding: const EdgeInsets.only(right: 30.0, left: 30.0),
               child: TableCalendar(
                 firstDay: DateTime.utc(2022, 7, 9),
-                lastDay: DateTime.utc(2022, 12, 31),
+                lastDay: DateTime.utc(2022, 7, 30),
                 //headerVisible: false, //カレンダーのヘッダー部分を消した
                 locale: 'ja_JP', //日本語化
-                focusedDay: DateTime.now(),
                 headerStyle: const HeaderStyle(
                   titleCentered: true, //年月を中央よせする
                   formatButtonVisible: false, //2weekのボタンをけす
                   titleTextStyle: //タイトルの文字の大きさを変える
                       TextStyle(fontWeight: FontWeight.w700, fontSize: 20.0),
                 ),
+                selectedDayPredicate: (day) {
+                  return isSameDay(_selected, day);
+                },
+                onDaySelected: (selected, focused) {
+                  if (!isSameDay(_selected, selected)) {
+                    setState(() {
+                      _selected = selected;
+                      _focused = focused;
+                    });
+                  }
+                },
+                focusedDay: _focused,
               ),
             ),
             Row(
