@@ -1,10 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'confirm.page.dart';
 
+//カレンダー
 DateTime _focused = DateTime.now();
-DateTime? _selected; //
+DateTime? _selected;
+DateTime? _rangeStart;
+DateTime? _rangeEnd;
 
+//動的にするからStateful
 class BookingPage extends StatefulWidget {
   const BookingPage({Key? key}) : super(key: key);
   @override
@@ -71,29 +76,51 @@ class _BookingPage extends State {
             //カレンダー表示
             Padding(
               padding: const EdgeInsets.only(right: 30.0, left: 30.0),
-              child: TableCalendar(
-                firstDay: DateTime.utc(2022, 7, 9),
-                lastDay: DateTime.utc(2022, 7, 30),
-                //headerVisible: false, //カレンダーのヘッダー部分を消した
-                locale: 'ja_JP', //日本語化
-                headerStyle: const HeaderStyle(
-                  titleCentered: true, //年月を中央よせする
-                  formatButtonVisible: false, //2weekのボタンをけす
-                  titleTextStyle: //タイトルの文字の大きさを変える
-                      TextStyle(fontWeight: FontWeight.w700, fontSize: 20.0),
+              child: SizedBox(
+                height: 400.0,
+                child: TableCalendar(
+                  firstDay: DateTime.utc(2019, 7, 9),
+                  lastDay: DateTime.utc(2022, 7, 30),
+                  locale: 'ja_JP', //日本語化
+                  calendarFormat: CalendarFormat.month,
+                  rangeStartDay: _rangeStart,
+                  rangeEndDay: _rangeEnd,
+                  sixWeekMonthsEnforced: true, //常に六週間表示にする
+                  shouldFillViewport: true,
+                  headerStyle: const HeaderStyle(
+                    titleCentered: true, //年月を中央よせする
+                    formatButtonVisible: false, //2weekのボタンをけす
+                    titleTextStyle: //タイトルの文字の大きさを変える
+                        TextStyle(fontWeight: FontWeight.w700, fontSize: 20.0),
+                  ),
+                  //カレンダーデコレーション
+                  calendarStyle: const CalendarStyle(
+                    selectedDecoration: BoxDecoration(
+                      color: Colors.blue,
+                      shape: BoxShape.circle,
+                    ),
+                    selectedTextStyle: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                        fontWeight: FontWeight.normal),
+                  ),
+
+                  //カレンダーを選択可能にする
+                  selectedDayPredicate: (day) {
+                    return isSameDay(_selected, day);
+                  },
+                  onDaySelected: (selected, focused) {
+                    if (!isSameDay(_selected, selected)) {
+                      setState(() {
+                        _selected = selected;
+                        _focused = focused;
+                      });
+                    }
+                  },
+                  //カレンダーに丸をつける
+
+                  focusedDay: _focused,
                 ),
-                selectedDayPredicate: (day) {
-                  return isSameDay(_selected, day);
-                },
-                onDaySelected: (selected, focused) {
-                  if (!isSameDay(_selected, selected)) {
-                    setState(() {
-                      _selected = selected;
-                      _focused = focused;
-                    });
-                  }
-                },
-                focusedDay: _focused,
               ),
             ),
             Row(
