@@ -95,6 +95,7 @@ class _BookingPage extends State {
                   ),
                   //カレンダーデコレーション
                   calendarStyle: const CalendarStyle(
+                    outsideDaysVisible: false, //カレンダーの表示をつける
                     selectedDecoration: BoxDecoration(
                       color: Colors.blue,
                       shape: BoxShape.circle,
