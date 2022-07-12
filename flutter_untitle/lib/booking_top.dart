@@ -6,8 +6,6 @@ import 'confirm.page.dart';
 //カレンダー
 DateTime _focused = DateTime.now();
 DateTime? _selected;
-DateTime? _rangeStart;
-DateTime? _rangeEnd;
 
 //動的にするからStateful
 class BookingPage extends StatefulWidget {
@@ -83,8 +81,6 @@ class _BookingPage extends State {
                   lastDay: DateTime.utc(2022, 7, 30),
                   locale: 'ja_JP', //日本語化
                   calendarFormat: CalendarFormat.month,
-                  rangeStartDay: _rangeStart,
-                  rangeEndDay: _rangeEnd,
                   sixWeekMonthsEnforced: true, //常に六週間表示にする
                   shouldFillViewport: true,
                   headerStyle: const HeaderStyle(
